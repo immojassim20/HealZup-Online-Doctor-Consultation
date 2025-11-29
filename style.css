@@ -13,40 +13,20 @@ body {
 header {
     background: linear-gradient(135deg, #8B5CF6 0%, #F97316 100%);
     color: white;
-    padding: 1rem 1.5rem 2rem 1.5rem;
-    box-shadow: 0 2px 10px rgba(0,0,0,0.12);
+    padding: 1.5rem 2rem;
+    box-shadow: 0 2px 10px rgba(0,0,0,0.1);
+    text-align: center;
 }
 
-.container { max-width: 1200px; margin: 0 auto; padding: 0 1rem; }
+.header-content {
+    max-width: 1200px;
+    margin: 0 auto;
+}
 
-.header-content { max-width: 1200px; margin: 0 auto; display: flex; align-items: center; gap: 1rem; justify-content: space-between; }
-
-.nav-row { display: flex; align-items: center; justify-content: space-between; }
-
-.logo { font-weight: 700; font-size: 1.5rem; color: white; }
-
-.main-nav { display: flex; gap: 1.2rem; align-items: center; }
-.main-nav .nav-link { color: #fff; text-decoration: none; font-weight: 500; padding: 0.4rem 0.6rem; border-radius: 6px; }
-.main-nav .nav-link:hover { background: rgba(255,255,255,0.08); }
-
-.nav-dropdown { position: relative; display: inline-block; }
-.nav-dropdown .dropdown-menu { display: none; position: absolute; top: 100%; left: 0; background: white; color: #333; border-radius: 6px; box-shadow: 0 4px 15px rgba(0,0,0,0.15); min-width: 250px; z-index: 100; }
-.nav-dropdown .dropdown-menu a { display: block; padding: 0.8rem 1rem; text-decoration: none; color: #333; border-bottom: 1px solid #eee; }
-.nav-dropdown .dropdown-menu a:last-child { border-bottom: none; }
-.nav-dropdown .dropdown-menu a:hover { background: #f0f0f0; }
-.nav-dropdown:hover .dropdown-menu { display: block; }
-
-.nav-actions { display: flex; gap: 0.5rem; align-items: center; }
-.btn { padding: 0.4rem 0.8rem; border-radius: 6px; border: none; cursor: pointer; font-weight: 600; }
-.doctor-join { background: #FBBF24; color: #111; border: none; }
-.login { background: #111827; color: white; text-decoration: none; padding: 0.5rem 0.8rem; border-radius: 6px; }
-.logout { background: transparent; border: 1px solid rgba(255,255,255,0.2); color: white; padding: 0.4rem 0.6rem; border-radius: 6px; }
-
-.header-hero { text-align: center; max-width: 1200px; margin: 1.5rem auto 0; padding: 0 1rem; }
-
-.search-bar { margin-top: 1rem; display: inline-flex; gap: 0.5rem; }
-.search-bar input { padding: 0.8rem 1rem; border-radius: 6px; border: none; width: 300px; max-width: 40vw; }
-.search-bar #searchBtn { background: #FBBF24; color: #111; border: none; padding: 0.8rem 1rem; border-radius: 6px; cursor: pointer; font-weight: 700; }
+.header-content div {
+    font-size: 1.5rem;
+    font-weight: 600;
+}
 
 .hospital-info {
     background: white;
@@ -55,152 +35,6 @@ header {
     max-width: 1200px;
     border-radius: 10px;
     box-shadow: 0 2px 10px rgba(0,0,0,0.1);
-}
-
-.brands-section {
-    background: white;
-    padding: 2rem;
-    margin: 2rem auto;
-    max-width: 1200px;
-    border-radius: 10px;
-    box-shadow: 0 2px 10px rgba(0,0,0,0.1);
-    text-align: center;
-}
-
-.brands-section h2 {
-    color: #8B5CF6;
-    font-size: 1.8rem;
-    margin-bottom: 0.5rem;
-}
-
-.brands-section p {
-    color: #666;
-    margin-bottom: 1.5rem;
-}
-
-.brands-grid {
-    display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
-    gap: 1.5rem;
-}
-
-.brand-card {
-    background: linear-gradient(135deg, #f0f4ff 0%, #fff5f0 100%);
-    padding: 1.5rem;
-    border-radius: 10px;
-    text-align: center;
-    transition: all 0.3s;
-    border: 1px solid #eee;
-}
-
-.brand-card:hover {
-    transform: translateY(-5px);
-    box-shadow: 0 5px 20px rgba(139, 92, 246, 0.15);
-    border-color: #8B5CF6;
-}
-
-.brand-logo {
-    font-size: 3rem;
-    margin-bottom: 1rem;
-}
-
-.brand-card h3 {
-    color: #333;
-    font-size: 1.1rem;
-    margin-bottom: 0.5rem;
-}
-
-.brand-card p {
-    color: #666;
-    font-size: 0.9rem;
-}
-
-.scroll-sentinel {
-    width: 100%;
-    height: 50px;
-    visibility: hidden;
-}
-
-/* Testimonials Section */
-.testimonials-section {
-    max-width: 1200px;
-    margin: 2rem auto;
-    padding: 1rem;
-    display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));
-    gap: 1.5rem;
-}
-
-.testimonial-card {
-    background: white;
-    border-radius: 10px;
-    padding: 1.5rem;
-    box-shadow: 0 2px 10px rgba(0,0,0,0.08);
-    border-left: 4px solid #8B5CF6;
-    transition: all 0.3s;
-}
-
-.testimonial-card:hover {
-    transform: translateY(-5px);
-    box-shadow: 0 5px 20px rgba(139, 92, 246, 0.15);
-}
-
-.testimonial-rating {
-    color: #F97316;
-    font-size: 0.95rem;
-    margin-bottom: 0.8rem;
-    font-weight: 600;
-}
-
-.testimonial-text {
-    color: #333;
-    font-size: 0.95rem;
-    line-height: 1.6;
-    margin-bottom: 1.2rem;
-    font-style: italic;
-}
-
-.testimonial-author {
-    display: flex;
-    align-items: center;
-    gap: 0.8rem;
-}
-
-.author-avatar {
-    width: 40px;
-    height: 40px;
-    border-radius: 50%;
-    background: linear-gradient(135deg, #8B5CF6 0%, #F97316 100%);
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    color: white;
-    font-weight: 700;
-    font-size: 0.9rem;
-}
-
-.testimonial-author strong {
-    display: block;
-    color: #333;
-    font-size: 0.95rem;
-}
-
-.testimonial-author small {
-    display: block;
-    color: #999;
-    font-size: 0.8rem;
-}
-
-.view-all-link {
-    color: #8B5CF6;
-    text-decoration: none;
-    font-weight: 600;
-    transition: all 0.3s;
-}
-
-.view-all-link:hover {
-    color: #F97316;
-    text-decoration: underline;
 }
 
 .hospital-info h2 {
@@ -239,49 +73,6 @@ header {
 .section-title p {
     color: #666;
     font-size: 1.1rem;
-}
-
-.section-title.hidden {
-    display: none;
-}
-
-.hospital-filter-section {
-    max-width: 1200px;
-    margin: 2rem auto 1.5rem;
-    padding: 0 1rem;
-    display: flex;
-    align-items: center;
-    gap: 1rem;
-    flex-wrap: wrap;
-}
-
-.hospital-filter-section label {
-    color: #333;
-    font-size: 1rem;
-    font-weight: 600;
-}
-
-.hospital-filter-section select {
-    padding: 0.8rem 1rem;
-    border-radius: 6px;
-    border: 2px solid #8B5CF6;
-    background: white;
-    color: #333;
-    font-size: 1rem;
-    cursor: pointer;
-    min-width: 250px;
-    transition: all 0.3s;
-}
-
-.hospital-filter-section select:hover {
-    border-color: #F97316;
-    box-shadow: 0 2px 8px rgba(139, 92, 246, 0.2);
-}
-
-.hospital-filter-section select:focus {
-    outline: none;
-    border-color: #F97316;
-    box-shadow: 0 4px 12px rgba(249, 115, 22, 0.3);
 }
 
 .back-btn {
@@ -375,17 +166,7 @@ header {
     gap: 1.5rem;
 }
 
-.doctors-grid {
-    max-width: 1200px;
-    margin: 0 auto;
-    padding: 1rem;
-    display: none;
-    grid-template-columns: repeat(auto-fill, minmax(350px, 1fr));
-    gap: 1.5rem;
-}
-
-.doctors-container.active,
-.doctors-grid.active {
+.doctors-container.active {
     display: grid;
 }
 
@@ -555,122 +336,6 @@ header {
 
 .hidden {
     display: none;
-}
-
-.site-footer {
-    background: linear-gradient(135deg, #1F2937 0%, #111827 100%);
-    color: white;
-    padding: 3rem 1.5rem 2rem;
-    margin-top: 4rem;
-}
-
-.site-footer .container {
-    max-width: 1200px;
-    margin: 0 auto;
-}
-
-.footer-content {
-    display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
-    gap: 2rem;
-    margin-bottom: 2rem;
-}
-
-.footer-section h3 {
-    color: #8B5CF6;
-    font-size: 1.3rem;
-    margin-bottom: 1rem;
-}
-
-.footer-section h4 {
-    color: #F97316;
-    font-size: 1.1rem;
-    margin-bottom: 1rem;
-}
-
-.footer-section p {
-    color: #D1D5DB;
-    font-size: 0.95rem;
-    line-height: 1.6;
-}
-
-.footer-links {
-    list-style: none;
-    padding: 0;
-}
-
-.footer-links li {
-    margin-bottom: 0.8rem;
-}
-
-.footer-links a {
-    color: #D1D5DB;
-    text-decoration: none;
-    transition: color 0.3s;
-}
-
-.footer-links a:hover {
-    color: #F97316;
-}
-
-.social-links {
-    display: flex;
-    gap: 1rem;
-}
-
-.social-icon {
-    display: inline-block;
-    padding: 0.5rem 1rem;
-    background: rgba(139, 92, 246, 0.2);
-    color: #F97316;
-    text-decoration: none;
-    border-radius: 5px;
-    transition: all 0.3s;
-    font-size: 0.9rem;
-}
-
-.social-icon:hover {
-    background: #8B5CF6;
-    color: white;
-}
-
-.footer-bottom {
-    border-top: 1px solid rgba(255, 255, 255, 0.1);
-    padding-top: 1.5rem;
-    text-align: center;
-}
-
-.footer-bottom p {
-    color: #D1D5DB;
-    font-size: 0.95rem;
-    margin: 0.5rem 0;
-}
-
-.footer-bottom strong {
-    color: #F97316;
-}
-
-.dev-link {
-    color: #F97316;
-    text-decoration: none;
-    transition: all 0.3s;
-    border-bottom: 2px solid transparent;
-}
-
-.dev-link:hover {
-    color: #FBBF24;
-    border-bottom-color: #FBBF24;
-    text-decoration: underline;
-}
-
-@media (max-width: 768px) {
-    .footer-content {
-        grid-template-columns: 1fr;
-    }
-    
-    .social-links {
-        justify-content: center;
-    }
 }
 
 @media (max-width: 768px) {
