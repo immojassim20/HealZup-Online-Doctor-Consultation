@@ -1,0 +1,349 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    background-color: #f5f7fa;
+    color: #333;
+}
+
+header {
+    background: linear-gradient(135deg, #8B5CF6 0%, #F97316 100%);
+    color: white;
+    padding: 1.5rem 2rem;
+    box-shadow: 0 2px 10px rgba(0,0,0,0.1);
+    text-align: center;
+}
+
+.header-content {
+    max-width: 1200px;
+    margin: 0 auto;
+}
+
+.header-content div {
+    font-size: 1.5rem;
+    font-weight: 600;
+}
+
+.hospital-info {
+    background: white;
+    padding: 2rem;
+    margin: 2rem auto;
+    max-width: 1200px;
+    border-radius: 10px;
+    box-shadow: 0 2px 10px rgba(0,0,0,0.1);
+}
+
+.hospital-info h2 {
+    color: #8B5CF6;
+    margin-bottom: 1rem;
+}
+
+.info-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    gap: 1rem;
+    margin-top: 1rem;
+}
+
+.info-item {
+    padding: 0.5rem;
+}
+
+.info-item strong {
+    color: #F97316;
+}
+
+.section-title {
+    text-align: center;
+    max-width: 1200px;
+    margin: 3rem auto 2rem;
+    padding: 0 1rem;
+}
+
+.section-title h2 {
+    color: #333;
+    font-size: 2rem;
+    margin-bottom: 0.5rem;
+}
+
+.section-title p {
+    color: #666;
+    font-size: 1.1rem;
+}
+
+.back-btn {
+    max-width: 1200px;
+    margin: 2rem auto 1rem;
+    padding: 0 1rem;
+}
+
+.back-btn button {
+    padding: 0.8rem 2rem;
+    background: linear-gradient(135deg, #8B5CF6 0%, #F97316 100%);
+    color: white;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    font-size: 1rem;
+    display: flex;
+    align-items: center;
+    gap: 0.5rem;
+    transition: all 0.3s;
+}
+
+.back-btn button:hover {
+    transform: scale(1.05);
+    box-shadow: 0 4px 15px rgba(139, 92, 246, 0.4);
+}
+
+.departments-container {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 1rem;
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+    gap: 2rem;
+}
+
+.department-card {
+    background: white;
+    border-radius: 15px;
+    padding: 2rem;
+    box-shadow: 0 2px 10px rgba(0,0,0,0.1);
+    cursor: pointer;
+    transition: all 0.3s;
+    text-align: center;
+}
+
+.department-card:hover {
+    transform: translateY(-10px);
+    box-shadow: 0 10px 30px rgba(0,0,0,0.15);
+}
+
+.department-icon {
+    width: 100px;
+    height: 100px;
+    margin: 0 auto 1.5rem;
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 3rem;
+    color: white;
+}
+
+.dept-cardiology { background: linear-gradient(135deg, #8B5CF6 0%, #F97316 100%); }
+.dept-dermatology { background: linear-gradient(135deg, #F97316 0%, #FBBF24 100%); }
+.dept-orthopedic { background: linear-gradient(135deg, #A855F7 0%, #F97316 100%); }
+.dept-gynecology { background: linear-gradient(135deg, #8B5CF6 0%, #EC4899 100%); }
+.dept-pediatrics { background: linear-gradient(135deg, #FB923C 0%, #FBBF24 100%); }
+.dept-neurology { background: linear-gradient(135deg, #7C3AED 0%, #8B5CF6 100%); }
+.dept-gastro { background: linear-gradient(135deg, #F97316 0%, #C026D3 100%); }
+.dept-ent { background: linear-gradient(135deg, #A855F7 0%, #FB923C 100%); }
+.dept-pulmonology { background: linear-gradient(135deg, #9333EA 0%, #F59E0B 100%); }
+
+.department-card h3 {
+    color: #333;
+    font-size: 1.4rem;
+    margin-bottom: 0.5rem;
+}
+
+.department-card p {
+    color: #666;
+    font-size: 0.9rem;
+}
+
+.doctors-container {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 1rem;
+    display: none;
+    grid-template-columns: repeat(auto-fill, minmax(350px, 1fr));
+    gap: 1.5rem;
+}
+
+.doctors-container.active {
+    display: grid;
+}
+
+.doctor-card {
+    background: white;
+    border-radius: 10px;
+    padding: 1.5rem;
+    box-shadow: 0 2px 10px rgba(0,0,0,0.1);
+    transition: transform 0.3s, box-shadow 0.3s;
+}
+
+.doctor-card:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 5px 20px rgba(0,0,0,0.15);
+}
+
+.doctor-header {
+    display: flex;
+    gap: 1rem;
+    margin-bottom: 1rem;
+}
+
+.doctor-avatar {
+    width: 80px;
+    height: 80px;
+    border-radius: 50%;
+    background: linear-gradient(135deg, #8B5CF6 0%, #F97316 100%);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: white;
+    font-size: 2rem;
+    font-weight: bold;
+}
+
+.doctor-info h3 {
+    color: #333;
+    margin-bottom: 0.3rem;
+}
+
+.specialty {
+    color: #F97316;
+    font-size: 0.9rem;
+    margin-bottom: 0.3rem;
+}
+
+.experience {
+    color: #666;
+    font-size: 0.85rem;
+}
+
+.doctor-details {
+    margin: 1rem 0;
+    padding-top: 1rem;
+    border-top: 1px solid #eee;
+}
+
+.detail-row {
+    display: flex;
+    justify-content: space-between;
+    margin-bottom: 0.5rem;
+    font-size: 0.9rem;
+}
+
+.detail-label {
+    color: #666;
+}
+
+.detail-value {
+    color: #333;
+    font-weight: 600;
+}
+
+.rating {
+    color: #ffa500;
+    font-size: 1rem;
+}
+
+.book-btn {
+    width: 100%;
+    padding: 0.8rem;
+    background: linear-gradient(135deg, #8B5CF6 0%, #F97316 100%);
+    color: white;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    font-size: 1rem;
+    font-weight: 600;
+    transition: transform 0.2s;
+    margin-top: 1rem;
+}
+
+.book-btn:hover {
+    transform: scale(1.02);
+    box-shadow: 0 4px 15px rgba(139, 92, 246, 0.4);
+}
+
+.modal {
+    display: none;
+    position: fixed;
+    z-index: 1000;
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0,0,0,0.5);
+}
+
+.modal-content {
+    background-color: white;
+    margin: 5% auto;
+    padding: 2rem;
+    border-radius: 10px;
+    width: 90%;
+    max-width: 500px;
+    position: relative;
+}
+
+.close {
+    position: absolute;
+    right: 1.5rem;
+    top: 1.5rem;
+    font-size: 2rem;
+    cursor: pointer;
+    color: #666;
+}
+
+.close:hover {
+    color: #333;
+}
+
+.form-group {
+    margin-bottom: 1.5rem;
+}
+
+.form-group label {
+    display: block;
+    margin-bottom: 0.5rem;
+    color: #333;
+    font-weight: 600;
+}
+
+.form-group input, .form-group select {
+    width: 100%;
+    padding: 0.8rem;
+    border: 1px solid #ddd;
+    border-radius: 5px;
+    font-size: 1rem;
+}
+
+.confirm-btn {
+    width: 100%;
+    padding: 1rem;
+    background: linear-gradient(135deg, #8B5CF6 0%, #F97316 100%);
+    color: white;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    font-size: 1rem;
+    font-weight: 600;
+}
+
+.confirm-btn:hover {
+    transform: scale(1.02);
+    box-shadow: 0 4px 15px rgba(139, 92, 246, 0.4);
+}
+
+.hidden {
+    display: none;
+}
+
+@media (max-width: 768px) {
+    .departments-container {
+        grid-template-columns: 1fr;
+    }
+    
+    .doctors-container {
+        grid-template-columns: 1fr;
+    }
+}
