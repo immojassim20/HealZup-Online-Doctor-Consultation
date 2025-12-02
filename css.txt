@@ -10,24 +10,126 @@ body {
     color: #333;
 }
 
+/* ===== NAVIGATION BAR STYLES ===== */
 header {
-    background: linear-gradient(135deg, #8B5CF6 0%, #F97316 100%);
-    color: white;
-    padding: 1.5rem 2rem;
+    header{background:linear-gradient(135deg,#8B5CF6 0%,#F97316 100%);
+    padding: 1rem 0;
+    position: sticky;
+    top: 0;
+    z-index: 1000;
     box-shadow: 0 2px 10px rgba(0,0,0,0.1);
-    text-align: center;
 }
 
 .header-content {
     max-width: 1200px;
     margin: 0 auto;
+    padding: 0 2rem;
 }
 
-.header-content div {
-    font-size: 1.5rem;
+.nav-row {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    gap: 2rem;
+}
+
+.logo a {
+    color: white;
+    font-size: 1.8rem;
+    font-weight: bold;
+    text-decoration: none;
+    letter-spacing: 1px;
+}
+
+.main-nav {
+    display: flex;
+    gap: 2rem;
+    align-items: center;
+    flex: 1;
+    justify-content: center;
+}
+
+.nav-link {
+    color: white;
+    text-decoration: none;
+    font-weight: 500;
+    font-size: 1rem;
+    transition: opacity 0.3s;
+    padding: 0.5rem 0;
+}
+
+.nav-link:hover {
+    opacity: 0.8;
+}
+
+.nav-dropdown {
+    position: relative;
+}
+
+.nav-dropdown:hover .dropdown-menu {
+    display: block;
+}
+
+.dropdown-menu {
+    display: none;
+    position: absolute;
+    top: 100%;
+    left: 0;
+    background: white;
+    box-shadow: 0 4px 12px rgba(0,0,0,0.15);
+    border-radius: 8px;
+    min-width: 250px;
+    padding: 0.5rem 0;
+    margin-top: 0.5rem;
+}
+
+.dropdown-menu a {
+    display: block;
+    padding: 0.75rem 1.5rem;
+    color: #333;
+    text-decoration: none;
+    transition: background 0.2s;
+}
+
+.dropdown-menu a:hover {
+    background: #f5f5f5;
+    color: #8B5CF6;
+}
+
+.nav-actions {
+    display: flex;
+    gap: 1rem;
+    align-items: center;
+}
+
+.btn {
+    padding: 0.6rem 1.5rem;
+    border: none;
+    border-radius: 25px;
     font-weight: 600;
+    cursor: pointer;
+    text-decoration: none;
+    display: inline-block;
+    transition: transform 0.2s, box-shadow 0.2s;
+    font-size: 0.95rem;
 }
 
+.btn:hover {
+    transform: translateY(-2px);
+    box-shadow: 0 4px 12px rgba(0,0,0,0.2);
+}
+
+.doctor-join {
+    background: #fbbf24;
+    color: #1f2937;
+}
+
+.login {
+    background: #1f2937;
+    color: white;
+}
+
+/* ===== HOSPITAL INFO ===== */
 .hospital-info {
     background: white;
     padding: 2rem;
@@ -57,6 +159,7 @@ header {
     color: #F97316;
 }
 
+/* ===== SECTION TITLES ===== */
 .section-title {
     text-align: center;
     max-width: 1200px;
@@ -75,6 +178,7 @@ header {
     font-size: 1.1rem;
 }
 
+/* ===== BACK BUTTON ===== */
 .back-btn {
     max-width: 1200px;
     margin: 2rem auto 1rem;
@@ -100,6 +204,7 @@ header {
     box-shadow: 0 4px 15px rgba(139, 92, 246, 0.4);
 }
 
+/* ===== DEPARTMENTS ===== */
 .departments-container {
     max-width: 1200px;
     margin: 0 auto;
@@ -157,6 +262,7 @@ header {
     font-size: 0.9rem;
 }
 
+/* ===== DOCTORS ===== */
 .doctors-container {
     max-width: 1200px;
     margin: 0 auto;
@@ -200,6 +306,7 @@ header {
     color: white;
     font-size: 2rem;
     font-weight: bold;
+    flex-shrink: 0;
 }
 
 .doctor-info h3 {
@@ -264,6 +371,7 @@ header {
     box-shadow: 0 4px 15px rgba(139, 92, 246, 0.4);
 }
 
+/* ===== MODALS ===== */
 .modal {
     display: none;
     position: fixed;
@@ -309,12 +417,20 @@ header {
     font-weight: 600;
 }
 
-.form-group input, .form-group select {
+.form-group input, 
+.form-group select, 
+.form-group textarea {
     width: 100%;
     padding: 0.8rem;
     border: 1px solid #ddd;
     border-radius: 5px;
     font-size: 1rem;
+    font-family: inherit;
+}
+
+.form-group textarea {
+    resize: vertical;
+    min-height: 80px;
 }
 
 .confirm-btn {
@@ -327,6 +443,7 @@ header {
     cursor: pointer;
     font-size: 1rem;
     font-weight: 600;
+    transition: transform 0.2s;
 }
 
 .confirm-btn:hover {
@@ -334,16 +451,163 @@ header {
     box-shadow: 0 4px 15px rgba(139, 92, 246, 0.4);
 }
 
+/* ===== FOOTER STYLES ===== */
+.site-footer {
+    background: #1f2937;
+    color: white;
+    padding: 3rem 0 1rem;
+    margin-top: 4rem;
+}
+
+.site-footer .container {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 0 2rem;
+}
+
+.footer-content {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    gap: 2rem;
+    margin-bottom: 2rem;
+}
+
+.footer-section h3,
+.footer-section h4 {
+    color: #8B5CF6;
+    margin-bottom: 1rem;
+    font-size: 1.2rem;
+}
+
+.footer-section p {
+    color: #d1d5db;
+    line-height: 1.6;
+}
+
+.footer-links {
+    list-style: none;
+    padding: 0;
+}
+
+.footer-links li {
+    margin-bottom: 0.75rem;
+}
+
+.footer-links a {
+    color: #d1d5db;
+    text-decoration: none;
+    transition: color 0.3s;
+}
+
+.footer-links a:hover {
+    color: white;
+}
+
+.social-links {
+    display: flex;
+    gap: 1rem;
+    flex-wrap: wrap;
+}
+
+.social-icon {
+    color: #d1d5db;
+    text-decoration: none;
+    padding: 0.5rem 1rem;
+    background: #374151;
+    border-radius: 8px;
+    transition: all 0.3s;
+    font-size: 0.9rem;
+}
+
+.social-icon:hover {
+    background: #8B5CF6;
+    color: white;
+    transform: translateY(-2px);
+}
+
+.footer-bottom {
+    text-align: center;
+    padding-top: 2rem;
+    border-top: 1px solid #374151;
+    color: #9ca3af;
+}
+
+/* ===== UTILITY CLASSES ===== */
 .hidden {
-    display: none;
+    display: none !important;
+}
+
+.container {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 2rem;
+}
+
+/* ===== RESPONSIVE DESIGN ===== */
+@media (max-width: 968px) {
+    .nav-row {
+        flex-wrap: wrap;
+    }
+    
+    .main-nav {
+        order: 3;
+        width: 100%;
+        justify-content: space-around;
+        margin-top: 1rem;
+    }
 }
 
 @media (max-width: 768px) {
+    .header-content {
+        padding: 0 1rem;
+    }
+    
+    .logo a {
+        font-size: 1.5rem;
+    }
+    
+    .main-nav {
+        gap: 1rem;
+        font-size: 0.9rem;
+    }
+    
+    .nav-actions {
+        flex-direction: column;
+        gap: 0.5rem;
+    }
+    
+    .btn {
+        padding: 0.5rem 1rem;
+        font-size: 0.85rem;
+    }
+    
     .departments-container {
         grid-template-columns: 1fr;
     }
     
     .doctors-container {
         grid-template-columns: 1fr;
+    }
+    
+    .footer-content {
+        grid-template-columns: 1fr;
+    }
+}
+
+@media (max-width: 480px) {
+    .section-title h2 {
+        font-size: 1.5rem;
+    }
+    
+    .department-icon {
+        width: 80px;
+        height: 80px;
+        font-size: 2.5rem;
+    }
+    
+    .doctor-avatar {
+        width: 60px;
+        height: 60px;
+        font-size: 1.5rem;
     }
 }
