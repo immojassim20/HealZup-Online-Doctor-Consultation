@@ -5,204 +5,6 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>About Us - HEALZUP</title>
     <link rel="stylesheet" href="style.css" />
-    <style>
-        /* Emergency Header Fix */
-        header {
-            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
-            padding: 1rem 0;
-            position: sticky;
-            top: 0;
-            z-index: 1000;
-            box-shadow: 0 2px 10px rgba(0,0,0,0.1);
-        }
-
-        .header-content {
-            max-width: 1200px;
-            margin: 0 auto;
-            padding: 0 2rem;
-        }
-
-        .nav-row {
-            display: flex;
-            justify-content: space-between;
-            align-items: center;
-            gap: 2rem;
-        }
-
-        .logo a {
-            color: white;
-            font-size: 1.8rem;
-            font-weight: bold;
-            text-decoration: none;
-        }
-
-        .main-nav {
-            display: flex;
-            gap: 2rem;
-            align-items: center;
-        }
-
-        .nav-link {
-            color: white;
-            text-decoration: none;
-            font-weight: 500;
-            transition: opacity 0.3s;
-        }
-
-        .nav-link:hover {
-            opacity: 0.8;
-        }
-
-        .nav-dropdown {
-            position: relative;
-        }
-
-        .nav-dropdown:hover .dropdown-menu {
-            display: block;
-        }
-
-        .dropdown-menu {
-            display: none;
-            position: absolute;
-            top: 100%;
-            left: 0;
-            background: white;
-            box-shadow: 0 4px 12px rgba(0,0,0,0.15);
-            border-radius: 8px;
-            min-width: 250px;
-            padding: 0.5rem 0;
-            margin-top: 0.5rem;
-        }
-
-        .dropdown-menu a {
-            display: block;
-            padding: 0.75rem 1.5rem;
-            color: #333;
-            text-decoration: none;
-            transition: background 0.2s;
-        }
-
-        .dropdown-menu a:hover {
-            background: #f5f5f5;
-        }
-
-        .nav-actions {
-            display: flex;
-            gap: 1rem;
-            align-items: center;
-        }
-
-        .btn {
-            padding: 0.6rem 1.5rem;
-            border: none;
-            border-radius: 25px;
-            font-weight: 600;
-            cursor: pointer;
-            text-decoration: none;
-            display: inline-block;
-            transition: transform 0.2s;
-        }
-
-        .btn:hover {
-            transform: translateY(-2px);
-        }
-
-        .doctor-join {
-            background: #fbbf24;
-            color: #1f2937;
-        }
-
-        .login {
-            background: #1f2937;
-            color: white;
-        }
-
-        /* Footer Styles */
-        .site-footer {
-            background: #1f2937;
-            color: white;
-            padding: 3rem 0 1rem;
-            margin-top: 4rem;
-        }
-
-        .footer-content {
-            display: grid;
-            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
-            gap: 2rem;
-            max-width: 1200px;
-            margin: 0 auto;
-            padding: 0 2rem;
-        }
-
-        .footer-section h3,
-        .footer-section h4 {
-            color: #8B5CF6;
-            margin-bottom: 1rem;
-        }
-
-        .footer-links {
-            list-style: none;
-            padding: 0;
-        }
-
-        .footer-links li {
-            margin-bottom: 0.5rem;
-        }
-
-        .footer-links a {
-            color: #d1d5db;
-            text-decoration: none;
-            transition: color 0.3s;
-        }
-
-        .footer-links a:hover {
-            color: white;
-        }
-
-        .social-links {
-            display: flex;
-            gap: 1rem;
-            flex-wrap: wrap;
-        }
-
-        .social-icon {
-            color: #d1d5db;
-            text-decoration: none;
-            padding: 0.5rem 1rem;
-            background: #374151;
-            border-radius: 8px;
-            transition: all 0.3s;
-        }
-
-        .social-icon:hover {
-            background: #8B5CF6;
-            color: white;
-        }
-
-        .footer-bottom {
-            text-align: center;
-            margin-top: 2rem;
-            padding-top: 2rem;
-            border-top: 1px solid #374151;
-            color: #9ca3af;
-        }
-
-        /* Page Styles */
-        .container {
-            max-width: 1200px;
-            margin: 0 auto;
-            padding: 2rem;
-        }
-
-        .about-page h1 {
-            color: #8B5CF6;
-            margin-bottom: 1rem;
-        }
-
-        .about-page section {
-            margin-bottom: 2rem;
-        }
-    </style>
 </head>
 <body>
     <header>
@@ -213,11 +15,7 @@
                 <div class="nav-dropdown">
                     <a href="#" class="nav-link">Hospitals</a>
                     <div class="dropdown-menu" id="hospitalsDropdown">
-                        <a href="evergreen.html">EVERGREEN Hospital, Lahore</a>
-                        <a href="#">Doctors Hospital, Lahore</a>
-                        <a href="#">Shaukat Khanum Memorial</a>
-                        <a href="#">Aga Khan University Hospital</a>
-                        <a href="#">Holy Family Hospital</a>
+                        <!-- filled by JS -->
                     </div>
                 </div>
                 <a href="departments.html" class="nav-link">Departments</a>
@@ -226,7 +24,7 @@
                 <a href="contact.html" class="nav-link">Contact</a>
             </nav>
             <div class="nav-actions">
-                <button class="btn doctor-join" onclick="window.location.href='join.html'">Join as Doctor</button>
+                <button class="btn doctor-join">Join as Doctor</button>
                 <a href="login.html" class="btn login">Login/SignUp</a>
             </div>
         </div>
