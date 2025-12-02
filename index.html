@@ -1,10 +1,11 @@
+
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Login / Sign Up - HEALZUP</title>
-    <link rel="stylesheet" href="style.css" />
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>HEALZUP - Doctors Hospital Lahore</title>
+    <link rel="stylesheet" href="style.css">
 </head>
 <body>
     <header>
@@ -12,6 +13,7 @@
             <div class="logo"><a href="index.html" class="nav-link">HEALZUP</a></div>
             <nav class="main-nav">
                 <a href="index.html" class="nav-link">Home</a>
+                <a href="hospitals-new.html" class="nav-link">Hospitals</a>
                 <a href="departments.html" class="nav-link">Departments</a>
                 <a href="blogs.html" class="nav-link">Blogs</a>
                 <a href="about.html" class="nav-link">About Us</a>
@@ -22,59 +24,152 @@
                 <a href="login.html" class="btn login">Login/SignUp</a>
             </div>
         </div>
+
+        <div class="header-hero">
+            <h1>Find and Book the
+                <span class="highlight">Best Doctors</span> near you
+            </h1>
+            <div class="search-bar">
+                <input type="text" id="searchCity" placeholder="Faisalabad" />
+                <input type="text" id="searchQuery" placeholder="Name, Specialty, Department (or rating:4.8)" />
+                <button id="searchBtn">Search</button>
+            </div>
+            <small style="color: rgba(255,255,255,0.9); display: block; margin-top: 0.5rem;">Search by doctor name, specialty, department, or try "rating:4.5" to filter by rating</small>
+        </div>
     </header>
 
-    <main class="auth-page">
-        <div class="container">
-            <div class="auth-box" id="loginBox">
-                <h2 id="authTitle">Login to HEALZUP</h2>
-                <form id="loginForm">
-                    <div class="form-group">
-                        <label>Email</label>
-                        <input type="email" id="loginEmail" required />
-                    </div>
-                    <div class="form-group">
-                        <label>Password</label>
-                        <input type="password" id="loginPassword" required />
-                    </div>
-                    <button type="submit" class="confirm-btn">Login</button>
-                </form>
-
-                <div class="divider">OR</div>
-
-                <h3>New to HEALZUP?</h3>
-                <button class="btn signup-toggle" id="toSignUp">Create an account</button>
-
-                <div class="small print">This is a dummy login; details are stored locally on this browser for demo only.</div>
+    <div class="brands-section">
+        <h2>Our Trusted Partners</h2>
+        <p>We collaborate with leading healthcare organizations</p>
+        <div class="brands-grid" id="brandsGrid">
+            <div class="brand-card">
+                <div class="brand-logo">🏥</div>
+                <h3>Doctors Hospital, Lahore</h3>
+                <p>Premium multi-specialty hospital</p>
             </div>
-
-            <div class="auth-box hidden" id="signupBox">
-                <h2>Create Your Account</h2>
-                <form id="signupForm">
-                    <div class="form-group">
-                        <label>Full Name</label>
-                        <input type="text" id="signupName" required />
-                    </div>
-                    <div class="form-group">
-                        <label>Email</label>
-                        <input type="email" id="signupEmail" required />
-                    </div>
-                    <div class="form-group">
-                        <label>Phone</label>
-                        <input type="tel" id="signupPhone" required />
-                    </div>
-                    <div class="form-group">
-                        <label>Password</label>
-                        <input type="password" id="signupPassword" required />
-                    </div>
-                    <button type="submit" class="confirm-btn">Sign Up</button>
-                </form>
-                <div class="small print">By creating an account you agree to our <a href="#">terms</a>.</div>
-                <button id="backToLogin" class="btn" style="margin-top: 1rem; background: transparent; border: 1px solid #8B5CF6; color: #8B5CF6;">← Back to Login</button>
+            <div class="brand-card">
+                <div class="brand-logo">🏥</div>
+                <h3>Shaukat Khanum Memorial</h3>
+                <p>Oncology & tertiary care center</p>
+            </div>
+            <div class="brand-card">
+                <div class="brand-logo">🏥</div>
+                <h3>Aga Khan University Hospital</h3>
+                <p>Advanced medical services</p>
+            </div>
+            <div class="brand-card">
+                <div class="brand-logo">🏥</div>
+                <h3>Holy Family Hospital</h3>
+                <p>Comprehensive healthcare provider</p>
+            </div>
+            <div class="brand-card">
+                <div class="brand-logo">🏥</div>
+                <h3>Pakistan Institute of Medical Sciences</h3>
+                <p>Academic medical center</p>
+            </div>
+            <div class="brand-card">
+                <div class="brand-logo">🔬</div>
+                <h3>DiagnoLabs</h3>
+                <p>Diagnostic & laboratory services</p>
             </div>
         </div>
-    </main>
+    </div>
 
+    <div class="section-title">
+        <h2>What Our Patients Say</h2>
+        <p>Real experiences from patients who trusted us with their care</p>
+    </div>
+
+    <div class="testimonials-section" id="testimonialsSection">
+        <div class="testimonial-card">
+            <div class="testimonial-rating">★★★★★</div>
+            <p class="testimonial-text">"HEALZUP made it so easy to find a specialist. The appointment booking was seamless and the doctor was excellent. Highly recommend!"</p>
+            <div class="testimonial-author">
+                <div class="author-avatar">AK</div>
+                <div>
+                    <strong>Ayesha Khan</strong>
+                    <small>Verified Patient</small>
+                </div>
+            </div>
+        </div>
+
+        <div class="testimonial-card">
+            <div class="testimonial-rating">★★★★★</div>
+            <p class="testimonial-text">"Professional service, comprehensive database of doctors and hospitals. This platform saved me so much time in finding quality healthcare."</p>
+            <div class="testimonial-author">
+                <div class="author-avatar">MH</div>
+                <div>
+                    <strong>Muhammad Hassan</strong>
+                    <small>Verified Patient</small>
+                </div>
+            </div>
+        </div>
+
+        <div class="testimonial-card">
+            <div class="testimonial-rating">★★★★★</div>
+            <p class="testimonial-text">"Great experience from start to finish. The search filter by ratings was very helpful in choosing the right doctor for my needs."</p>
+            <div class="testimonial-author">
+                <div class="author-avatar">SF</div>
+                <div>
+                    <strong>Sara Fatima</strong>
+                    <small>Verified Patient</small>
+                </div>
+            </div>
+        </div>
+
+        <div class="testimonial-card">
+            <div class="testimonial-rating">★★★★★</div>
+            <p class="testimonial-text">"Finally, a platform that understands patient needs. Easy interface, quick appointments, and access to top specialists across cities."</p>
+            <div class="testimonial-author">
+                <div class="author-avatar">RJ</div>
+                <div>
+                    <strong>Rashid Javaid</strong>
+                    <small>Verified Patient</small>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <div class="section-title" id="departmentTitle">
+        <h2>All Departments</h2>
+        <p><a href="departments.html" class="view-all-link">View all departments and find specialists →</a></p>
+    </div>
+
+    <div class="doctors-container" id="doctorsContainer"></div>
+
+    <div id="bookingModal" class="modal">
+        <div class="modal-content">
+            <span class="close" onclick="closeModal()">&times;</span>
+            <h2 style="margin-bottom: 1.5rem; color: #8B5CF6;">Book Appointment</h2>
+            <div class="form-group">
+                <label>Patient Name</label>
+                <input type="text" id="patientName" placeholder="Enter your name">
+            </div>
+            <div class="form-group">
+                <label>Phone Number</label>
+                <input type="tel" id="patientPhone" placeholder="03XX-XXXXXXX">
+            </div>
+            <div class="form-group">
+                <label>Appointment Date</label>
+                <input type="date" id="appointmentDate">
+            </div>
+            <div class="form-group">
+                <label>Appointment Time</label>
+                <select id="appointmentTime">
+                    <option>9:00 AM</option>
+                    <option>10:00 AM</option>
+                    <option>11:00 AM</option>
+                    <option>2:00 PM</option>
+                    <option>3:00 PM</option>
+                    <option>4:00 PM</option>
+                    <option>5:00 PM</option>
+                </select>
+            </div>
+            <button class="confirm-btn" onclick="confirmBooking()">Confirm Appointment</button>
+        </div>
+    </div>
+
+    <script src="script.js"></script>
     <footer class="site-footer">
         <div class="container">
             <div class="footer-content">
@@ -87,7 +182,7 @@
                     <ul class="footer-links">
                         <li><a href="index.html">Home</a></li>
                         <li><a href="departments.html">Departments</a></li>
-                        <li><a href="about.html">About Us</a></li>
+                        <li><a href="hospitals.html">Hospitals</a></li>
                         <li><a href="blogs.html">Blogs</a></li>
                     </ul>
                 </div>
@@ -111,13 +206,10 @@
             </div>
             <div class="footer-bottom">
                 <p>&copy; 2025 HEALZUP — All Rights Reserved</p>
-                <p>Built and Designed by <strong><a href="https://github.com/Jutt" target="_blank" class="dev-link">Jutt</a></strong></p>
+                <p>Team Lead <strong><a href="https://github.com/Abdullah-PyDev" target="_blank" class="dev-link">Jutt</a></strong></p>
             </div>
         </div>
     </footer>
-
-    <script src="script.js"></script>
 </body>
+
 </html>
-
-
