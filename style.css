@@ -47,3 +47,36 @@ header{background:linear-gradient(135deg,#8B5CF6 0%,#F97316 100%);color:white;pa
   .departments-container{grid-template-columns:1fr;}
   .doctors-container{grid-template-columns:1fr;}
 }
+/* Navigation Bar */
+header{background:linear-gradient(135deg,#667eea 0%,#764ba2 100%);position:sticky;top:0;z-index:1000;}
+.header-content{max-width:1200px;margin:0 auto;padding:0 2rem;}
+.nav-row{display:flex;justify-content:space-between;align-items:center;gap:2rem;}
+.logo a{color:white;font-size:1.8rem;font-weight:bold;text-decoration:none;}
+.main-nav{display:flex;gap:2rem;align-items:center;flex:1;justify-content:center;}
+.nav-link{color:white;text-decoration:none;font-weight:500;transition:opacity 0.3s;}
+.nav-link:hover{opacity:0.8;}
+.nav-dropdown{position:relative;}
+.nav-dropdown:hover .dropdown-menu{display:block;}
+.dropdown-menu{display:none;position:absolute;top:100%;left:0;background:white;box-shadow:0 4px 12px rgba(0,0,0,0.15);border-radius:8px;min-width:250px;padding:0.5rem 0;margin-top:0.5rem;}
+.dropdown-menu a{display:block;padding:0.75rem 1.5rem;color:#333;text-decoration:none;}
+.dropdown-menu a:hover{background:#f5f5f5;color:#8B5CF6;}
+.nav-actions{display:flex;gap:1rem;}
+.btn{padding:0.6rem 1.5rem;border:none;border-radius:25px;font-weight:600;cursor:pointer;text-decoration:none;display:inline-block;transition:transform 0.2s;}
+.btn:hover{transform:translateY(-2px);}
+.doctor-join{background:#fbbf24;color:#1f2937;}
+.login{background:#1f2937;color:white;}
+
+/* Footer */
+.site-footer{background:#1f2937;color:white;padding:3rem 0 1rem;margin-top:4rem;}
+.site-footer .container{max-width:1200px;margin:0 auto;padding:0 2rem;}
+.footer-content{display:grid;grid-template-columns:repeat(auto-fit,minmax(250px,1fr));gap:2rem;}
+.footer-section h3,.footer-section h4{color:#8B5CF6;margin-bottom:1rem;}
+.footer-section p{color:#d1d5db;}
+.footer-links{list-style:none;padding:0;}
+.footer-links li{margin-bottom:0.75rem;}
+.footer-links a{color:#d1d5db;text-decoration:none;}
+.footer-links a:hover{color:white;}
+.social-links{display:flex;gap:1rem;flex-wrap:wrap;}
+.social-icon{color:#d1d5db;text-decoration:none;padding:0.5rem 1rem;background:#374151;border-radius:8px;transition:all 0.3s;}
+.social-icon:hover{background:#8B5CF6;color:white;}
+.footer-bottom{text-align:center;padding-top:2rem;border-top:1px solid #374151;color:#9ca3af;}
