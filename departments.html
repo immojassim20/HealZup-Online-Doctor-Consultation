@@ -151,10 +151,27 @@
                 container.appendChild(card);
             });
         }
+            function showDoctorsFromDept(dept) {
+    const doctorsData = window.doctors || {};
+    const hospitalFilter = selectedHospitalFilter || '';
 
-        function showDoctorsFromDept(dept) {
-            const doctorsData = window.doctors || {};
-            const hospitalFilter = selectedHospitalFilter || '';
+    
+    let doctorList = doctorsData[dept] || [];
+    
+    
+    if (hospitalFilter) {
+        doctorList = doctorList.filter(doctor => 
+            doctor.hospital === hospitalFilter
+        );
+    }
+    
+    if (doctorList.length === 0)
+    {
+        container.innerHTML = '<p>No doctors found in this department.</p>';
+        return;
+    }
+    
+}
             
             const container = document.getElementById('doctorsContainer');
             const titleEl = document.getElementById('selectedDeptName');
@@ -259,11 +276,11 @@
                 </div>
                 <div class="footer-section">
                     <h4>Follow Us</h4>
-                    <div class="social-links">
-                        <a href="#" class="social-icon">Facebook</a>
-                        <a href="#" class="social-icon">Twitter</a>
-                        <a href="#" class="social-icon">Instagram</a>
-                    </div>
+                   <div class="social-links">
+    <a href="https://www.facebook.com/healzup" target="_blank" rel="noopener noreferrer" class="social-icon">Facebook</a>
+    <a href="https://twitter.com/healzup" target="_blank" rel="noopener noreferrer" class="social-icon">Twitter</a>
+    <a href="https://www.instagram.com/healzup" target="_blank" rel="noopener noreferrer" class="social-icon">Instagram</a>
+</div>
                 </div>
             </div>
             <div class="footer-bottom">
@@ -274,3 +291,4 @@
     </footer>
 </body>
 </html>
+
